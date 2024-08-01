@@ -1,38 +1,56 @@
-# Ejecutar Scripts en Adobe Illustrator
+# Exportar Selección como PNG Script
 
-Este script de Adobe Illustrator permite ejecutar otros scripts `.jsx` almacenados en una carpeta especificada por el usuario. Es útil para gestionar y ejecutar scripts personalizados desde una ubicación centralizada.
+Este script de Adobe Illustrator exporta la selección actual en el documento como un archivo PNG, solicitando al usuario que ingrese el nombre del archivo y manejando la normalización del nombre.
+
+## Funcionalidad
+
+- **Exportar Selección**: Permite exportar la selección actual en el documento como un archivo PNG.
+- **Nombre del Archivo**: Solicita al usuario que ingrese un nombre para el archivo y normaliza el nombre eliminando caracteres no válidos y reemplazando espacios por guiones.
+- **Manejo de Archivos**: Verifica si el archivo ya existe y pregunta si se debe reemplazar.
+- **Notificación de Finalización**: Muestra una alerta indicando que la exportación fue exitosa.
 
 ## Instrucciones de Uso
 
-1. **Configurar la Ruta de la Carpeta de Scripts**
+1. **Descargar el Script**
 
-   Abre el archivo del script en Adobe Illustrator y especifica la ruta de tu carpeta de scripts en la variable `customPath`. Asegúrate de usar barras inclinadas (`/`) o dobles barras invertidas (`\\`) en la ruta.
+   Descarga el archivo `.jsx` y guárdalo en tu computadora.
 
-   ```javascript
-   var customPath = "C:/Users/csarmiento/Downloads/scripts/ilustrator"; // O "C:\\Users\\csarmiento\\Downloads\\scripts\\ilustrator"
-   
-2. Ejecutar el Script
+2. **Ejecutar el Script en Adobe Illustrator**
 
-Ejecuta el script en Adobe Illustrator. Aparecerá una ventana de diálogo con una lista de todos los scripts .jsx en la carpeta especificada.
+   - Abre Adobe Illustrator.
+   - Ve a `Archivo` > `Secuencias de comandos` > `Otro script...`.
+   - Selecciona el archivo `.jsx` que descargaste.
 
-Seleccionar y Ejecutar un Script
+3. **Exportar la Selección como PNG**
 
-Selecciona el script que deseas ejecutar de la lista y haz clic en "Ejecutar". Si deseas cancelar la operación, haz clic en "Cancelar".
+   - Selecciona los objetos en el documento que deseas exportar.
+   - El script solicitará que ingreses un nombre para el archivo.
+   - El script normalizará el nombre del archivo eliminando caracteres no válidos y reemplazando espacios por guiones.
+   - Si el archivo ya existe, el script te preguntará si deseas reemplazarlo.
+   - El archivo PNG se guardará en la ruta especificada en el script (`X:/Publicidad1/Firma 2021/FIRMAS 2024`).
+   - Al finalizar, se mostrará una alerta indicando que la exportación fue exitosa.
 
-Requisitos
-Adobe Illustrator
-Scripts en formato .jsx almacenados en la carpeta especificada
-Funcionalidad
-Obtener la Lista de Scripts
+## Requisitos
 
-La función getScriptFiles(customPath) obtiene todos los archivos .jsx en la carpeta especificada y los retorna en un arreglo.
+- Adobe Illustrator
 
-Mostrar la Lista de Scripts y Ejecutar el Seleccionado
+## Detalles del Script
 
-La función runScript() muestra una ventana de diálogo con la lista de scripts obtenidos. Permite al usuario seleccionar y ejecutar un script de la lista.
+- Verifica si hay una selección en el documento activo.
+- Solicita al usuario que ingrese un nombre para el archivo.
+- Normaliza el nombre del archivo eliminando caracteres no válidos y reemplazando espacios por guiones.
+- Verifica si el archivo ya existe y, si es así, pregunta si se debe reemplazar.
+- Exporta la selección como un archivo PNG utilizando las opciones de exportación especificadas.
+- Muestra una alerta una vez que la exportación ha sido completada.
 
-Advertencias
-Asegúrate de que la ruta de la carpeta especificada es correcta.
-La carpeta debe contener scripts en formato .jsx.
-Licencia
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+## Contribuciones
+
+Las contribuciones son bienvenidas. Si tienes alguna sugerencia o mejora, por favor crea un `issue` o envía un `pull request`.
+
+## Autor
+
+Alvaro Alexander Simbaqueva
